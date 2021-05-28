@@ -1,0 +1,19 @@
+.login-card {
+    width: 400px;
+    padding: 50px;
+    margin: 20px auto;
+}
+  
+.form-field {
+    margin-bottom: 15px !important;
+}
+
+.error-msg {
+    color: #f44336;
+    font-size: 14px;
+    margin-top: -10px;
+}
+
+.login-button {
+    margin-top: 15px !important;
+}
