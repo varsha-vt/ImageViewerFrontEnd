@@ -1,19 +1,21 @@
-.login-card {
+.dispNone {
+    display:none;
+}
+
+.dispBlock {
+    display: block;
+}
+
+.error {
+    color: red;
+}
+.main-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.card-container{
     width: 400px;
     padding: 50px;
     margin: 20px auto;
-}
-  
-.form-field {
-    margin-bottom: 15px !important;
-}
-
-.error-msg {
-    color: #f44336;
-    font-size: 14px;
-    margin-top: -10px;
-}
-
-.login-button {
-    margin-top: 15px !important;
 }
