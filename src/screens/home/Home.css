@@ -1,0 +1,46 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 80px;
+  }
+  
+  .cards-layout {
+    width: 530px;
+    margin: 20px 10px;
+    height: 0%;
+  }
+  
+  .posts {
+    margin: 5px 20px;
+  }
+  
+  .dispNone {
+    display: none;
+  }
+  
+  .dispBlock {
+    display: block;
+  }
+  
+  .likes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px 0px;
+  }
+  
+  .comments {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .comments-section {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .control {
+    width: 400px;
+  }
+  
