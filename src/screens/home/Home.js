@@ -15,12 +15,12 @@ import FormControl from "@material-ui/core/FormControl";
 import InputLabel from "@material-ui/core/InputLabel";
 import Input from "@material-ui/core/Input";
 import Button from "@material-ui/core/Button";
-import profileImg from "../../assets/images/upgrad.svg";
+import profileImg from "../../assets/images/icon.svg";
 
 const useStyles = (theme) => ({
   media: {
     height: 150,
-    paddingTop: "56.25%", // 16:9,
+    paddingTop: "56.25%",
   },
 });
 
@@ -28,7 +28,7 @@ class Home extends Component {
   constructor() {
     super();
     this.state = {
-      profilePic: profileImg,
+      profilePic: profileImg, //New Instagram API does not list profile picture, using the default profile pic instead
       endpoint1: [],
       postListForSearch: [],
       postList: [],
@@ -38,7 +38,7 @@ class Home extends Component {
     };
   }
 
-  // Invoking APIs when component mounts
+  // Invoking APIs
   componentDidMount() {
     let data = null;
     let xhr = new XMLHttpRequest();
@@ -56,8 +56,6 @@ class Home extends Component {
           });
       }
     });
-
-    // https://graph.instagram.com/me/media?fields=id,caption&access_token=YourAccessToken
 
     xhr.open(
       "GET",
@@ -100,8 +98,6 @@ class Home extends Component {
         });
       }
     });
-
-    //graph.instagram.com/17895695668004550?fields=id,media_type,media_url,username,timestamp&access_token=YourAccessToken
     xhr.open(
       "GET",
       this.props.baseUrl +
@@ -114,17 +110,15 @@ class Home extends Component {
     xhr.send(data);
   }
 
-  // function for displaying the filtered post
+  // Display filtered post
   filteredPostHandler = (filteredPost) => {
     this.setState({ postList: filteredPost });
   };
 
-  //function to add a like to a post
+  //Add like to the post
   likeClickHandler = (id) => {
     let postList = this.state.postList;
     postList.forEach(function (post) {
-      // if the post id equal to the liked post id then display
-      // the likedIcon, hide the likeIcon, and increment like count by 1
       if (post.id === id) {
         post.likesCount += 1;
         post.likeIcon = "dispNone";
@@ -137,12 +131,10 @@ class Home extends Component {
     }, this);
   };
 
-  //function to unlike a post
+  //Unlike a post function
   likedClickHandler = (id) => {
     let postList = this.state.postList;
     postList.forEach(function (post) {
-      // if the post id equal to the liked post id then display the likeIcon,
-      // hide the likedIcon, and decrement like count by 1
       if (post.id === id) {
         post.likesCount -= 1;
         post.likeIcon = "dispBlock";
@@ -171,7 +163,7 @@ class Home extends Component {
     } else {
       let postList = this.state.postList;
       postList.forEach(function (post) {
-        //if the post id is equal to the commented post id, then add the comment in the commentContent array
+        // If comment post id and post id are the same , add the comment
         if (post.id === id) {
           post.commentContent.push(this.state.comment);
           this.setState({ comment: "" });
@@ -203,7 +195,7 @@ class Home extends Component {
     const { classes } = this.props;
     return (
       <div>
-        {/* display the contents only if the user is logged in */}
+        {/* Content to be displayed only if the user is logged in */}
         {sessionStorage.getItem("access-token") !== null ? (
           <div>
             <Header
@@ -221,7 +213,6 @@ class Home extends Component {
                     <CardHeader
                       avatar={<Avatar src={post.profilePic} alt="pic" />}
                       title={post.username}
-                      // subheader="03/10/2018 16:07:24"
                       subheader={this.getPostDate(post.timestamp)}
                     />
                     <CardContent>
