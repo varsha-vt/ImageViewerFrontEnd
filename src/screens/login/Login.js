@@ -36,15 +36,20 @@ class Login extends Component {
     }
 
     loginClickHandler = () => {
+        //Change user/token if required here
+        let user = "admin",
+            pass = "admin",
+             accessToken = "IGQVJXN2hnRFdpVkxpLUxmQ2NxOFBJREhFSklRcF9ONUdsdjVMXzJZAQnYyOXF0cjZA3QTBfWE5zczNBb1ZATR2tsMDdJeTNETFVYYzljUkU5U0d2dlk2amk3ZAGwwV3N0QUxYb1p2cVYwS2NVZATZAveWdadkdNUThTeXQySGVr"
+
         this.setState({ incorrectUsernamePassword: "dispNone" });
         this.state.username === "" ? this.setState({ usernameRequired: "dispBlock" }) : this.setState({ usernameRequired: "dispNone" });
         this.state.password === "" ? this.setState({ passwordRequired: "dispBlock" }) : this.setState({ passwordRequired: "dispNone" });
 
         if (this.state.username === "" || this.state.password === "") { return }
 
-        if (this.state.username === "admin" && this.state.password === "admin") {
-            sessionStorage.setItem('username', 'admin');
-            sessionStorage.setItem('access-token', 'IGQVJVNFQyem40VDlJVU5Ha3F1QUs0YWswNkVUcGN0cTQ5Vkc4OGdZASE84ZADVsWnI2ZAlpDUEZAvUmxJSDQzTF9KMWp2N3B3dWVacHR5blg0cDc2d2tJdlBVTlJmX0Eyal9yYVZACYVFwNjlUU01IRTV4S251ZAnVmT2lzTl9z');
+        if (this.state.username === user && this.state.password === pass) {
+            sessionStorage.setItem('username', user);
+            sessionStorage.setItem('access-token', accessToken);
             this.setState({ loggedIn: true });
             this.navigateToHome();
         } else {
