@@ -71,7 +71,7 @@ class Header extends Component {
     };
   }
 
-  //function to change the state of the search box to filter the posts according to their caption
+  //Change state of the search box inorder to filter the post
   inputChangeHandler = (e) => {
     let newList = this.props.list.filter((post) => {
       return String(post.caption).toLowerCase().indexOf(e.target.value.toLowerCase()) >= 0;

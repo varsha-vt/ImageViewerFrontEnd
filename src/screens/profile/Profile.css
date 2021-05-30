@@ -1,0 +1,92 @@
+.profile-container {
+    margin: 10px 100px;
+  }
+  
+  .profile-header {
+    display: flex;
+  }
+  
+  .header-content {
+    margin: 5px 50px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .header-image {
+    margin-left: 150px;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+  }
+  
+  .profile-header-row2 {
+    display: flex;
+    margin-top: 10px;
+  }
+  
+  .profile-header-row3 {
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+  }
+  
+  .dispNone {
+    display: none;
+  }
+  
+  .dispBlock {
+    display: block;
+  }
+  
+  .red {
+    color: red;
+  }
+  
+  .body-content {
+    margin: 20px 10px;
+  }
+  
+  .post-modal-container {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .post-modal-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .post-modal-avatar-img {
+    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+  }
+  
+  .post-modal-image-container {
+    margin-right: 10px;
+    width: 300px;
+    height: 400px;
+  }
+  
+  .post-modal-comments-section {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .post-modal-likes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 150px 0px 0px 0px;
+  }
+  
+  .post-modal-comments {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
