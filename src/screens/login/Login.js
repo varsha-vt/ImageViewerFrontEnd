@@ -35,6 +35,7 @@ class Login extends Component {
         this.props.history.push('/home');
     }
 
+    //Handler called when login button is clicked. The token mentioned below is added to the session storage
     loginClickHandler = () => {
         //Change user/token if required here
         let user = "user",
