@@ -39,7 +39,7 @@ class Login extends Component {
         //Change user/token if required here
         let user = "user",
             pass = "P@ssw0rd",
-             accessToken = "IGQVJXTzlSUzl4RlJBZAk5iaklrUl8xd050RVZA6X1pfdHlyN3pXa0MyTFNrNy1ucVprVkdFLUZAwXzFycFVubFNOaTBIbHlzYUc3MXhuWUdVWWFpVk9ndnN0UGRNWkpEekNTdWFsWW9JTGZACOFZAoaTJUT2J2Y1VnakVSNUdr"
+            accessToken = "IGQVJXTzlSUzl4RlJBZAk5iaklrUl8xd050RVZA6X1pfdHlyN3pXa0MyTFNrNy1ucVprVkdFLUZAwXzFycFVubFNOaTBIbHlzYUc3MXhuWUdVWWFpVk9ndnN0UGRNWkpEekNTdWFsWW9JTGZACOFZAoaTJUT2J2Y1VnakVSNUdr"
 
         this.setState({ incorrectUsernamePassword: "dispNone" });
         this.state.username === "" ? this.setState({ usernameRequired: "dispBlock" }) : this.setState({ usernameRequired: "dispNone" });
